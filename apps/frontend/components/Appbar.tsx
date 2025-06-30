@@ -1,30 +1,50 @@
-import { Button } from "./ui/button";
+"use client";
+
 import {
-  ClerkProvider,
   SignInButton,
   SignUpButton,
   SignedIn,
   SignedOut,
   UserButton,
 } from "@clerk/nextjs";
+import { motion } from "motion/react";
+import { containerVariants, itemVariants } from "@/lib/animation-variants";
+import { Header } from "./Header";
 
 export function Appbar() {
   return (
-    <div className="flex justify-between">
-      <div>Kami</div>
-      <div>
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      className="flex items-center mt-4 justify-between"
+    >
+      <Header />
+
+      <motion.div
+        variants={itemVariants}
+        className="flex gap-2 items-center justify-center"
+      >
+        {/* <ThemeButton /> */}
+
         <SignedOut>
-          <SignInButton />
+          <SignInButton>
+            <button className="border border-zinc-800 hover:bg-zinc-600/10 bg-zinc-900 cursor-pointer px-4 py-2 rounded-3xl">
+              Sign In
+            </button>
+          </SignInButton>
+
           <SignUpButton>
-            <button className="bg-[#6c47ff] text-white rounded-full font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 cursor-pointer">
+            <button className="border border-zinc-800 hover:bg-zinc-600/10 bg-zinc-900 cursor-pointer px-4 py-2 rounded-3xl">
               Sign Up
             </button>
           </SignUpButton>
         </SignedOut>
+
         <SignedIn>
           <UserButton />
         </SignedIn>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }
