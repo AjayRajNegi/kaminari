@@ -1,8 +1,7 @@
 export const meta = {
   title: "Mobile Magic",
-  description:
-    "Mobile Magic is a tool that allows you to create mobile apps using natural language.",
-};
+  description: "Mobile Magic is a tool that allows you to create mobile apps using natural language.",
+}
 
 export const prompts = [
   { id: 1, title: "Build a chess app" },
@@ -15,4 +14,5 @@ export const placeholderArray = [
   "What is a good app to learn programming...",
   "Generate a logo for a startup...",
   "Generate a logo for a startup...",
-];
+]
+
