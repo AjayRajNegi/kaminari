@@ -1,11 +1,11 @@
-import { ThemeProvider } from "@/components/theme-provider";
-import type { Metadata } from "next";
-import { Figtree } from "next/font/google";
 import { cn } from "@/lib/utils";
+import type { Metadata } from "next";
 import { meta } from "@/lib/constants";
-import { Particles } from "../../../packages/ui/src/particles";
-import { SidebarProvider } from "@/components/ui/sidebar";
+import { Figtree } from "next/font/google";
 import { AppSidebar } from "@/components/app-sidebar";
+import { SidebarProvider } from "@/components/ui/sidebar";
+import { ThemeProvider } from "@/components/theme-provider";
+import { Particles } from "../../../packages/ui/src/particles";
 
 import "./globals.css";
 

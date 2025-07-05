@@ -1,7 +1,7 @@
+import { Hero } from "@/components/hero";
 import { Prompt } from "@/components/Prompt";
 import { Appbar } from "@/components/Appbar";
 import { SidebarInset } from "@/components/ui/sidebar";
-import { Hero } from "@/components/hero";
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
             <Appbar />
 
             <div className="max-w-2xl mx-auto pt-32">
-    	      <Hero />
+              <Hero />
 
               <div className="pt-4">
                 <Prompt />
